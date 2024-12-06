@@ -20,10 +20,10 @@ version = "0.1.6"
 inherits = "release"
 lto = "thin"
 
-# Config for 'cargo dist'
+# Config for 'dist'
 [workspace.metadata.dist]
-# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
-cargo-dist-version = "0.22.0"
+# The preferred dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.25.1"
 # CI backends to support
 ci = "github"
 # The archive format to use for non-windows builds (defaults .tar.xz)
@@ -33,12 +33,7 @@ windows-archive = ".zip"
 # The installers to generate for each app
 installers = []
 # Target platforms to build apps for (Rust target-triple syntax)
-targets = [
-    "aarch64-apple-darwin",
-    "x86_64-apple-darwin",
-    "x86_64-unknown-linux-gnu",
-    "x86_64-pc-windows-msvc",
-]
+targets = ["aarch64-unknown-linux-gnu"]
 
 [package.metadata.dist]
 dist = false
