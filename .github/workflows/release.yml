@@ -128,6 +128,9 @@ jobs:
           merge-multiple: true
       - name: Install dependencies
         run: |
+          rustup target add aarch64-unknown-linux-gnu
+          sudo apt-get update
+          sudo apt-get install gcc-aarch64-linux-gnu
           ${{ matrix.packages_install }}
       - name: Build artifacts
         run: |
